@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
+    <title>Form</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="mywork.html">My work</a>
+            <a href="about.html">About me</a>
+            <a href="form.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="ask-contact">
+            <p>Interested in collaborating with me?</p>
+            <p>lets work together !</p>
+        </section>
+        <section>
+            <form action="action.php" method="post">
+                <div class="basic-detail-container">
+                    <div class="name-container">
+                        <label><span>Name</span> <br><input type="text" required name="first_name"></label>
+                    </div>
+                    <div class="email-container">
+                        <label><span>Email</span> <br><input type="email" required name="email" id=""></label>
+                    </div>
+                </div>
+                <div class="message-container">
+                    <label>
+                        <span>Leave your message</span> <br>
+                        <textarea name="message" id="message" placeholder="Here..." rows="10"></textarea>
+                    </label>
+                </div>
+                <div class="submit">
+                    <button>Submit</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>These are the footer and my social media accounts.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,27 @@
+header{
+    position: sticky;
+    top: 0px;
+    z-index: 99;
+}
+
+.nav-item{
+    margin: 0 15px;
+}
+
+.btn-lg{
+    background-color: rgb(1, 189, 1);
+    border-color: rgb(1, 189, 1);
+}
+
+.btn-lg:hover,
+.btn-lg:active,
+.btn-lg:focus{
+    outline-color: green !important;
+    background-color: green !important;
+    border-color: green !important;
+}
+
+form{
+    width: 400px;
+    margin: 100px auto;
+}

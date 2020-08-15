@@ -1,0 +1,104 @@
+body{
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    max-width: 1366px;
+    margin: auto;
+    background-color: rgb(244, 251, 253);
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    /* border: 1px solid red; */
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: rgb(244, 251, 253);
+    z-index: 99;
+}
+
+nav{
+    width: 550px;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+
+nav a{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    color: rgb(26, 107, 67);
+    box-shadow: 0 2px 6px 1px rgb(161, 184, 161);
+}
+
+nav a:hover{
+    background-color: rgb(211, 219, 185);
+}
+
+nav a:active{
+    transform: scale(0.9);
+}
+
+nav a:active, nav a:visited{
+    color: rgb(26, 107, 67);
+}
+
+section{
+    margin: 60px 0px;
+}
+
+.previous-work h2 a:active,
+.previous-work h2 a:visited{
+    color: rgb(17, 102, 98);
+}
+
+.previous-work h2 a:hover{
+    text-decoration: underline;
+}
+
+.previous-work ul{
+    margin-left: 40%;
+}
+
+h1, h2, p{
+    text-align: center;
+}
+
+h1, h2{
+    font-size: 1.8rem;
+    color: rgb(17, 102, 98);
+}
+
+p, i, li, td, th{
+    color: rgb(51, 56, 31);
+    font-size: 1.1rem;
+}
+
+table{
+    margin: auto;
+}
+
+th{
+    color: rgb(17, 102, 98);
+}
+
+table, th, td{
+    border: 1px solid rgb(17, 102, 98);
+    border-collapse: collapse;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p{
+    text-align: center;
+}
+
+img{
+    margin-left: 40%;
+}

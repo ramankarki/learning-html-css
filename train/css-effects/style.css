@@ -1,0 +1,68 @@
+body{
+    display: flex;
+    height: 1000px;
+    background-image: url(image/first.png);
+    background-size: contain;
+}
+
+.container1{
+    width: 400px;
+    height: 300px;
+    position: relative;
+}
+
+.container1 h2{
+    color: rgb(13, 163, 13);
+    text-align: center;
+}
+
+.text {
+    color: white;
+    position: absolute;
+    right: 100px;
+    top: 90px;
+    z-index: 2;
+    opacity: 0;
+    transition-duration: 500ms;
+}
+
+.green-bg{
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    background-color: rgba(20, 187, 20, 0.74);
+    z-index: 1;
+    opacity: 0;
+    transition-duration: 500ms;
+}
+
+.container1:hover .text,
+.container1:hover .green-bg{
+    opacity: 1;
+    transition-duration: 500ms;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    transition-duration: 500ms;
+    position: absolute;
+}
+
+.container2{
+    margin: 60px;
+    width: 400px;
+    height: 300px;
+    position: relative;
+    background-image: url("image/first.png");
+    background-size: contain;
+}
+
+.container2 p {
+    opacity: 0;
+}
+.container2:hover .green-bg,
+.container2:hover p {
+    opacity: 1;
+}
+

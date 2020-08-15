@@ -1,0 +1,70 @@
+.ask-contact p{
+    font-size: 1.5rem;
+}
+
+form{
+    display: block;
+    max-width: 580px;
+    margin: 80px auto;
+    /* border: 1px solid red; */
+}
+
+.basic-detail-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 60px 0px;
+    /* border: 1px solid red; */
+}
+
+.message-container textarea{
+    min-width: 549px;
+    max-width: 549px;
+}
+
+span{
+    display: inline-block;
+    font-size: 1.3rem;
+    opacity: 0.7;
+    margin: 5px 0px;
+}
+
+input[type=text],
+input[type=email],
+textarea{
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    border: 1px solid rgb(129, 129, 129);
+    border-radius: 5px;
+}
+
+textarea{
+    padding: 10px 15px;
+}
+
+.submit{
+    width: 140px;
+    margin: 50px auto;
+    /* border: 1px solid red; */
+}
+
+.submit button{
+    font-size: 1.3rem;
+    padding: 15px 40px;
+    color: white;
+    background-color: rgb(26, 107, 67);
+    border: 2px solid rgb(26, 107, 67);
+    border-radius: 100px;
+    transition: color, background-color;
+    transition-duration: 300ms;
+}
+
+.submit button:hover{
+    color: rgb(26, 107, 67);
+    background-color: rgb(228, 236, 205);
+    transition-duration: 400ms;
+}
+
+.submit button:active{
+    transform: scale(0.95);
+    outline: none;
+}

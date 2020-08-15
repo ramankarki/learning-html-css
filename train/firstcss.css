@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(221, 221, 217);
+}
+
+h1{
+    color: white;
+    background-color: green;
+}
+
+p{
+    background-color: blue;
+    color: white;
+}
+
+ol{
+    border: 4px solid green;
+    background-color: pink;
+    color: red;
+}
+
+img{
+    border: 4px solid pink;
+}
+
+table, td, th{
+    border: 1px solid green;
+    border-collapse: collapse;
+    padding: 8px 15px;
+}
+
+table, th{
+    border: 2px solid green;
+}

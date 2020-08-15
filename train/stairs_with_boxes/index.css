@@ -1,0 +1,26 @@
+body{
+    display: flex;
+    justify-content: center;
+    height: 550px;
+    align-items: center;
+}
+
+.container div{
+    width: 200px;
+    height: 50px;
+    position: relative;
+}
+
+.first{
+    background-color: red;
+}
+
+.second{
+    background-color: green;
+    left: 60px;
+}
+
+.third{
+    background-color: blue;
+    left: 120px;
+}

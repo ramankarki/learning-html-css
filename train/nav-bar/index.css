@@ -1,0 +1,40 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    max-width: 1366px;
+    height: 1000px;
+    margin: auto;
+}
+
+header{
+    margin-top: 10px;
+    background-color: rgb(66, 66, 66);
+    position: sticky;
+    top: 0px;
+}
+
+nav{
+    display: block;
+    max-width: 1200px;
+    margin: auto;
+}
+
+nav a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    font-size: 1.15rem;
+}
+
+nav a:hover{
+    background-color: black;
+}
+
+nav a:visited,
+nav a:active{
+    color: white;
+}
