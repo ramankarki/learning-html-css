@@ -30,8 +30,10 @@ html {
 }
 
 header {
+    width: 100%;
+    max-width: 1366px;
     background-color: var(--dark-blue);
-    position: sticky;
+    position: fixed;
     top: 0;
 }
 
@@ -82,8 +84,13 @@ a:active {
     color: none;
 }
 
+.dropdown-button {
+    display: none;
+}
+
 /*---------------------------------first section--------------------------*/
 .first-section {
+    margin-top: 3.6rem;
     background-color: var(--light-blue);
 }
 
@@ -237,7 +244,6 @@ footer {
 }
 
 
-
 @media (max-width: 768px) {
     .footer-column-container {
         grid-template-columns: 1fr;
@@ -246,5 +252,13 @@ footer {
     .footer-column {
         margin: auto;
         text-align: center;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .dropdown-button {
+        display: block;
     }
 }
