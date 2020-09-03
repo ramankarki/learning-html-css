@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    max-width: 1366px;
+    margin: auto;
+
+}
+
+:root {
+    --dark-blue: #2E323F;
+    --light-blue: #3B4050;
+    --dark-grey: #6F737F;
+    --dark-orange: #A59678;
+    --light-grey: #ebebeb;
+    --light-white: rgb(185, 185, 185);
+    --small: .9rem;
+    --normal: 1rem;
+    --medium: 1.4rem;
+    --larger: 1.7rem;
+    --largest: 2.5rem;
+}
+
+.content {
+    width: 90%;
+    margin: auto;
+}
+
+header {
+    background-color: var(--dark-blue);
+    position: sticky;
+    top: 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.logo p {
+    font-size: var(--medium);
+    padding: 1rem;
+}
+
+.header-container a {
+    display: inline-block;
+    padding: 1rem;
+    margin: 0 .5rem;
+    font-size: var(--small);
+    color: var(--light-white);
+    text-decoration: none;
+}
+
+.header-container a:hover {
+    color: white;
+}
+
+.orange-button {
+    background-color: var(--dark-orange);
+    border-radius: 5rem;
+    color: white !important;
+    border: none;
+    padding: 1rem;
+    font-size: var(--normal);
+    transition-duration: 300ms;
+}
+
+.orange-button:hover {
+    background-color: white;
+    color: var(--dark-blue) !important;
+    transition-duration: 300ms;
+}
+
+a:visited,
+a:focus,
+a:active {
+    color: none;
+}
+
+/*---------------------------------first section--------------------------*/
+.first-section {
+    background-color: var(--light-blue);
+}
+
+.first-section-container {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5rem 0;
+    justify-content: space-evenly;
+}
+
+.first-section-container h1 {
+    max-width: 25rem;
+    font-size: var(--largest);
+    margin: 2rem;
+    line-height: 3rem;
+}
+
+.jumbotron {
+    max-width: 30rem;
+    margin: 2rem;
+}
+
+.jumbotron p {
+    line-height: 2rem;
+}
+
+.jumbotron button {
+    margin: 2rem 0;
+}
+
+/* -------------------------------------------------------- */
+
+.second-section {
+    background-color: var(--light-grey);
+}
+
+.second-section-container {
+    padding: 3rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.second-section-item {
+    max-width: 19rem;
+    text-align: center;
+    margin: 2rem;
+}
+
+.small-heading {
+    font-size: var(--medium);
+    color: var(--light-blue);
+    margin: 1.5rem 0;
+}
+
+.text {
+    color: var(--dark-grey);
+    line-height: 2rem;
+}
+
+/* ------------------------------------------------------------------------ */
+
+.third-section {
+    padding: 5rem 0;
+}
+
+.third-section-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.third-section-item img {
+    width: 100%;
+    height: auto;
+    margin: 2.5rem 0;
+}
+
+.left {
+    max-width: 600px;
+}
+
+.orange-heading {
+    color: var(--dark-orange);
+}
+
+.third-section-card {
+    background-color: var(--light-blue);
+    text-align: center;
+    padding: 1rem 1rem 2rem 1rem;
+    margin: 1rem 0;
+    max-width: 300px;
+}
+
+.third-section-card .white {
+    color: white;
+}
+
+.third-section-card .text {
+    color: var(--light-grey);
+}
+
+footer {
+    background-color: var(--light-blue);
+    padding: 5rem 0;
+}
+
+.largest-text {
+    font-size: var(--larger);
+    color: white;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.footer-column-container {
+    color: white;
+    display: grid;
+    grid-template-columns: 400px 170px 150px 150px;
+    justify-content: space-around;
+}
+
+.footer-column .small-heading + p {
+    color: var(--light-white);
+}
+
+.light-white {
+    color: var(--light-white);
+    text-decoration: none;
+    line-height: 2rem;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 1005px) {
+    .medium-third-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin: 2rem 2rem;
+    }
+
+    .footer-column-container {
+        grid-template-columns: 400px 150px;
+        grid-row-gap: 3rem;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .footer-column-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-column {
+        margin: auto;
+        text-align: center;
+    }
+}
