@@ -111,10 +111,13 @@ nav {
     margin: 1rem 0;
 }
 
-.text {
-    text-align: center;
+.paragraph {
     color: var(--dark-grey);
     line-height: 2rem;
+}
+
+.center {
+    text-align: center;
 }
 
 .row {
