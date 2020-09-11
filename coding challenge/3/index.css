@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    margin: auto;
+}
+
+:root {
+    --darker-blue: #2E323F;
+    --dark-blue: #3B4050;
+    --dark-orange: #A59678;
+    --dark-grey: #6F737F;
+    --light-grey: rgb(185, 185, 185);
+    --lighter-grey: #ebebeb;
+    --normal: 1rem;
+    --medium: 1.4rem;
+    --larger: 1.9rem;
+    --largest: 2.5rem;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+header {
+    background-color: var(--darker-blue);
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:active,
+a:focus,
+a:visited {
+    color: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-button {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+}
+
+.nav-brand {
+    padding: 1rem;
+    display: inline-block;
+    font-size: var(--medium);
+    font-weight: bold;
+    color: white;
+}
+
+.link {
+    color: var(--light-grey);
+    padding: .5rem;
+    margin: 0 1rem;
+}
+
+.link:hover {
+    color: white;
+}
+
+#home {
+    color: white;
+}
+
+.orange-button {
+    color: white;
+    background-color: var(--dark-orange);
+    padding: 1rem 1.5rem;
+    font-size: var(--normal);
+    font-weight: bold;
+    border-radius: 5rem;
+    border: none;
+    transition-duration: 400ms;
+    outline: none;
+}
+
+.orange-button:hover {
+    background-color: white;
+    color: var(--darker-blue);
+    transition-duration: 400ms;
+}
+
+.orange-button:active {
+    transform: scale(.9);
+    transition-duration: 400ms;
+}
+
+.first-container {
+    background-color: var(--dark-blue);
+    color: white;
+    padding: 4rem 0;
+}
+
+.biggest-text {
+    font-size: var(--larger);
+    line-height: 2.5rem;
+}
+
+.normal-paragraph {
+    color: var(--light-grey);
+    line-height: 1.8rem;
+}
+
+.first-right button{
+    margin-top: 2rem;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 2rem 4rem;
+}
+
+.col-12 {
+    grid-column: 12 span;
+}
+
+@media (min-width: 768px) {
+    .first-container {
+        padding: 6rem 0;
+    }
+
+    .biggest-text {
+        font-size: var(--largest);
+    }
+}
+
+@media (min-width: 992px) {
+    .dropdown-button {
+        display: none;
+    }
+
+    .dropdown-content {
+        display: block;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-6 {
+        grid-column: 6 span;
+    }
+}
+
