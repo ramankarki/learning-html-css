@@ -5,13 +5,152 @@
           box-sizing: border-box;
 }
 
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+}
+
+.row-gap-1 {
+  grid-row-gap: 1.5rem;
+}
+
+.row > * {
+  grid-column: span 12;
+}
+
 body {
   background-color: #f7fbff;
 }
 
-.contact {
+hr {
+  border: none;
+  height: 1px;
+  background-color: #dbdbdb;
+}
+
+.contact-us {
   color: #102a43;
   text-align: center;
   margin-top: 2rem;
+  font-size: 1.8rem;
+}
+
+.form {
+  max-width: 62rem;
+}
+
+.left-form {
+  color: #102a43;
+}
+
+.help {
+  font-size: 1.4rem;
+  text-align: center;
+  margin: 2rem 0 1rem 0;
+}
+
+.form-info {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.option-card {
+  font-size: 0.9rem;
+  margin: 2rem 0;
+}
+
+.option-card .option-br {
+  margin-bottom: 1rem;
+}
+
+.option-card .option-br ~ .option-br {
+  margin: 1rem 0;
+}
+
+.option-card .option-heading {
+  margin-bottom: .5rem;
+  font-weight: bold;
+}
+
+.option-card .option-text {
+  line-height: 1.5rem;
+  color: #505fa0;
+}
+
+.right-form {
+  margin: 2rem 0;
+  padding: 2rem 1.5rem;
+  background-color: white;
+  -webkit-box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.445);
+          box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.445);
+  border-radius: .3rem;
+}
+
+.right-form input,
+.right-form textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  border: 1px solid #dbdbdb;
+  border-radius: .2rem;
+  padding: .8rem 1rem;
+  font-size: 1rem;
+}
+
+.right-form input:focus,
+.right-form textarea:focus {
+  outline: none;
+  border: 1px solid #5457ff;
+}
+
+.right-form .form-element {
+  font-size: 0.9rem;
+  color: #102a43;
+  margin-bottom: .5rem;
+  display: inline-block;
+}
+
+.right-form button[type=submit] {
+  border: none;
+  background-color: #5457ff;
+  color: white;
+  font-size: 1.2rem;
+  padding: .7rem;
+  border-radius: .3rem;
+  outline: none;
+}
+
+.right-form .form-br {
+  margin: 2.5rem 0 2rem 0;
+}
+
+.right-form .contact-info-heading {
+  color: #102a43;
+  font-weight: bold;
+  margin-bottom: .5rem;
+}
+
+.right-form .location,
+.right-form .phone,
+.right-form .email {
+  color: #505fa0;
+  line-height: 2.5rem;
+}
+
+@media (min-width: 992px) {
+  .contact {
+    font-size: 2.8rem;
+  }
 }
 /*# sourceMappingURL=index.css.map */

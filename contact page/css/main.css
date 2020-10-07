@@ -4,4 +4,28 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+}
+
+.row-gap-1 {
+  grid-row-gap: 1.5rem;
+}
+
+.row > * {
+  grid-column: span 12;
+}
 /*# sourceMappingURL=main.css.map */

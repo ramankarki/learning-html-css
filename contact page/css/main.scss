@@ -1,7 +1,8 @@
 $dark-color: #102a43;
-$light-color: #627d98;
+$light-color: #505fa0;
 $bg-color: #f7fbff;
 $purple: #5457ff;
+$box-color: #dbdbdb;
 $biggest-text: 2.8rem;
 $bigger-text: 1.8rem;
 $normal-text: 1rem;
@@ -14,3 +15,37 @@ $small-text: 0.9rem;
     box-sizing: border-box;
 }
 
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+p {
+    line-height: 2rem;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+}
+
+.row-gap-1 {
+    grid-row-gap: 1.5rem;
+}
+
+.row > * {
+    grid-column: span 12;
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}

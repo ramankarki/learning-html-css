@@ -4,8 +4,133 @@ body {
     background-color: $bg-color;
 }
 
-.contact {
+hr {
+    border: none;
+    height: 1px;
+    background-color: $box-color;
+}
+
+.contact-us {
     color: $dark-color;
     text-align: center;
     margin-top: 2rem;
+    font-size: $bigger-text;
 }
+
+.form {
+    max-width: 62rem;
+}
+
+.left-form {
+    color: $dark-color;
+}
+
+.help {
+    font-size: $bigger-text - .4rem;
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+}
+
+.form-info {
+    text-align: center;
+    font-size: $normal-text;
+}
+
+.option-card {
+    .option-br {
+        margin-bottom: 1rem;
+    }
+
+    .option-br ~ .option-br {
+        margin: 1rem 0;
+    }
+
+    .option-heading {
+        margin-bottom: .5rem;
+        font-weight: bold;
+    }
+
+    .option-text {
+        line-height: 1.5rem;
+        color: $light-color;
+    }
+    
+    font-size: $small-text;
+    margin: 2rem 0;
+}
+
+.right-form {
+    margin: 2rem 0;
+    padding: 2rem 1.5rem;
+    background-color: white;
+    box-shadow: 0 .1rem .4rem rgba(0, 0, 0, 0.445);
+    border-radius: .3rem;
+
+    input,
+    textarea {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        border: 1px solid $box-color;
+        border-radius: .2rem;
+        padding: .8rem 1rem;
+        font-size: $normal-text;
+    }
+
+    input:focus,
+    textarea:focus {
+        outline: none;
+        border: 1px solid $purple;
+    }
+
+    .form-element {
+        font-size: $small-text;
+        color: $dark-color;
+        margin-bottom: .5rem;
+        display: inline-block;
+    }
+
+    button[type=submit] {
+        border: none;
+        background-color: $purple;
+        color: white;
+        font-size: $normal-text + .2rem;
+        padding: .7rem;
+        border-radius: .3rem;
+        outline: none;
+    }
+
+    .form-br {
+        margin: 2.5rem 0 2rem 0;
+    }
+
+    .contact-info-heading {
+        color: $dark-color;
+        font-weight: bold;
+        margin-bottom: .5rem;
+    }
+
+    .location,
+    .phone,
+    .email {
+        color: $light-color;
+        line-height: 2.5rem;
+    }
+}
+
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+    .contact {
+        font-size: $biggest-text;
+    }
+}
+
+
