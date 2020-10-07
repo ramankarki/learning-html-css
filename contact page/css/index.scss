@@ -2,6 +2,9 @@
 
 body {
     background-color: $bg-color;
+    max-width: 85rem;
+    margin: auto;
+    margin-bottom: 5rem;
 }
 
 hr {
@@ -13,12 +16,20 @@ hr {
 .contact-us {
     color: $dark-color;
     text-align: center;
-    margin-top: 2rem;
+    margin: 2rem 0 0 0;
     font-size: $bigger-text;
 }
 
 .form {
     max-width: 62rem;
+    align-items: flex-start;
+}
+
+.left-form,
+.right-form {
+    max-width: 30rem;
+    margin: 0 auto;
+    display: block;
 }
 
 .left-form {
@@ -34,6 +45,7 @@ hr {
 .form-info {
     text-align: center;
     font-size: $normal-text;
+    line-height: 2rem;
 }
 
 .option-card {
@@ -46,7 +58,7 @@ hr {
     }
 
     .option-heading {
-        margin-bottom: .5rem;
+        margin-bottom: 1rem;
         font-weight: bold;
     }
 
@@ -54,16 +66,20 @@ hr {
         line-height: 1.5rem;
         color: $light-color;
     }
+
+    img {
+        display: none;
+    }
     
     font-size: $small-text;
     margin: 2rem 0;
 }
 
 .right-form {
-    margin: 2rem 0;
+    width: 100%;
     padding: 2rem 1.5rem;
     background-color: white;
-    box-shadow: 0 .1rem .4rem rgba(0, 0, 0, 0.445);
+    box-shadow: 0 .2rem .5rem -.1rem rgba(0, 0, 0, 0.445);
     border-radius: .3rem;
 
     input,
@@ -73,7 +89,7 @@ hr {
         min-width: 100%;
         border: 1px solid $box-color;
         border-radius: .2rem;
-        padding: .8rem 1rem;
+        padding: .6rem 1rem;
         font-size: $normal-text;
     }
 
@@ -91,13 +107,15 @@ hr {
     }
 
     button[type=submit] {
-        border: none;
+        border: 2px solid $purple;
         background-color: $purple;
         color: white;
         font-size: $normal-text + .2rem;
         padding: .7rem;
         border-radius: .3rem;
         outline: none;
+        transition-duration: 400ms;
+        cursor: pointer;
     }
 
     .form-br {
@@ -115,22 +133,76 @@ hr {
     .email {
         color: $light-color;
         line-height: 2.5rem;
+        font-size: $small-text;
     }
 }
 
 
-@media (min-width: 576px) {
 
+@media (min-width: 576px) {
+    .right-form {
+        button[type=submit]:hover {
+            background-color: white;
+            color: $purple;
+            transition-duration: 400ms;
+        }
+
+        button[type=submit]:active {
+            transform: scale(.8);
+            transition-duration: 400ms;
+        }
+    }
 }
 
 @media (min-width: 768px) {
+    .left-form {
+        order: 2;
+    }
 
+    .form-info,
+    .help {
+        text-align: left;
+    }
+
+    .contact-us {
+        margin-bottom: 3rem;
+    }
+
+    .help {
+        margin-top: 0;
+    }
 }
 
 @media (min-width: 992px) {
     .contact {
         font-size: $biggest-text;
     }
+
+    .option-card {
+        .option-hover {
+            img {
+                display: block;
+                position: absolute;
+                width: 1rem;
+                height: auto;
+                right: 1rem;
+                top: 20%;
+                transition-duration: 400ms;
+            }
+
+            &:hover {
+                img {
+                    right: 0;
+                    transition-duration: 400ms;
+                }
+            }
+
+            position: relative;
+            cursor: pointer;
+        }
+    }
+
+    .right-form {
+        padding: 2rem;
+    }
 }
-
-
