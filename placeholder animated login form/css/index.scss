@@ -1,0 +1,146 @@
+@import "main";
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+a:active,
+a:visited,
+a:focus {
+    color: none;
+}
+
+body {
+    background-image: url("/placeholder animated login form/image/background.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.box {
+    max-width: 350px;
+    padding: 2rem;
+    background-color: white;
+    margin: auto;
+    border-radius: .5rem;
+    box-shadow: 0 5px 15px -5px black;
+
+    h1 {
+        color: $blue;
+        text-align: center;
+    }
+}
+
+.input-button-box {
+    font-size: $normal-text;
+    
+    label {
+        position: relative;
+        display: block;
+        transition-duration: 300ms;
+    }
+
+    .small-icon,
+    .element {
+        position: absolute;
+        bottom: 30%;
+    }
+
+    .small-icon {
+        width: 1.2rem;
+        height: auto;
+        filter: invert(70%);
+        left: 0;
+    }
+
+    .element {
+        color: $light-grey;
+        left: 14%;
+        bottom: 30%;
+        transition-duration: 300ms;
+    }
+
+    .input {
+        padding: .8rem 2.5rem;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $light-grey;
+        color: $blue;
+        font-size: $normal-text;
+    }
+
+    .input:focus {
+        border-color: $green;
+    }
+
+    .forgot-password {
+        color: $pink;
+        text-align: right;
+        font-size: $small-text;
+    }
+
+    .submit {
+        padding: .5rem;
+        color: white;
+        font-size: $medium-text;
+        border: none;
+        border-radius: 100rem;
+        cursor: pointer;
+        background-image: linear-gradient(90deg, $green 30%, $blue 110%);
+        transition-duration: 400ms;
+    }
+
+    .submit:active {
+        transform: scale(.9);
+        transition-duration: 300ms;
+    }
+
+    .input:focus + .element,
+    .input:valid + .element {
+        top: -.7rem;
+        font-size: $small-text;
+        color: $green;
+        transition-duration: 300ms;
+    }
+}
+
+.small-text {
+    color: $light-grey;
+    font-size: $small-text;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.signup-using {
+    .social-icons {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .social-icon {
+        width: 2.5rem;
+        height: auto;
+        cursor: pointer;
+    }
+}
+
+.account {
+    .signup {
+        color: $blue;
+        text-align: center;
+        display: block;
+    }
+}
+
+@media (min-width: 992px) {
+    .input-button-box {
+        .submit:hover {
+            box-shadow: 0 5px 15px -5px black;
+            transition-duration: 400ms;
+        }
+    }
+}

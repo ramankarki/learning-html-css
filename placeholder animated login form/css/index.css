@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+}
+
+.row-gap-1 {
+  grid-row-gap: 1.5rem;
+}
+
+.row-gap-2 {
+  grid-row-gap: 2.5rem;
+}
+
+.row > * {
+  grid-column: span 12;
+}
+
+@media (min-width: 576px) {
+  .sm-col-6 {
+    grid-column: span 6;
+  }
+  .col-gap-1 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .md-col-6 {
+    grid-column: span 6;
+  }
+  .md-col-12 {
+    grid-column: span 12;
+  }
+  .col-gap-5 {
+    grid-column-gap: 5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .lg-col-6 {
+    grid-column: span 6;
+  }
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+a:active,
+a:visited,
+a:focus {
+  color: none;
+}
+
+body {
+  background-image: url("/placeholder animated login form/image/background.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box {
+  max-width: 350px;
+  padding: 2rem;
+  background-color: white;
+  margin: auto;
+  border-radius: .5rem;
+  -webkit-box-shadow: 0 5px 15px -5px black;
+          box-shadow: 0 5px 15px -5px black;
+}
+
+.box h1 {
+  color: #150485;
+  text-align: center;
+}
+
+.input-button-box {
+  font-size: 1rem;
+}
+
+.input-button-box label {
+  position: relative;
+  display: block;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+.input-button-box .small-icon,
+.input-button-box .element {
+  position: absolute;
+  bottom: 30%;
+}
+
+.input-button-box .small-icon {
+  width: 1.2rem;
+  height: auto;
+  -webkit-filter: invert(70%);
+          filter: invert(70%);
+  left: 0;
+}
+
+.input-button-box .element {
+  color: #6e6e6e;
+  left: 14%;
+  bottom: 30%;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+.input-button-box .input {
+  padding: .8rem 2.5rem;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #6e6e6e;
+  color: #150485;
+  font-size: 1rem;
+}
+
+.input-button-box .input:focus {
+  border-color: #03C4A1;
+}
+
+.input-button-box .forgot-password {
+  color: #C62A88;
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+.input-button-box .submit {
+  padding: .5rem;
+  color: white;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 100rem;
+  cursor: pointer;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(30%, #03C4A1), color-stop(110%, #150485));
+  background-image: linear-gradient(90deg, #03C4A1 30%, #150485 110%);
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+
+.input-button-box .submit:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+.input-button-box .input:focus + .element,
+.input-button-box .input:valid + .element {
+  top: -.7rem;
+  font-size: 0.8rem;
+  color: #03C4A1;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+.small-text {
+  color: #6e6e6e;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.signup-using .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.signup-using .social-icon {
+  width: 2.5rem;
+  height: auto;
+  cursor: pointer;
+}
+
+.account .signup {
+  color: #150485;
+  text-align: center;
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .input-button-box .submit:hover {
+    -webkit-box-shadow: 0 5px 15px -5px black;
+            box-shadow: 0 5px 15px -5px black;
+    -webkit-transition-duration: 400ms;
+            transition-duration: 400ms;
+  }
+}
+/*# sourceMappingURL=index.css.map */
