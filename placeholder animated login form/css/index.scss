@@ -54,7 +54,7 @@ body {
         width: 1.2rem;
         height: auto;
         filter: invert(70%);
-        left: 0;
+        left: 2%;
     }
 
     .element {
@@ -73,7 +73,8 @@ body {
         font-size: $normal-text;
     }
 
-    .input:focus {
+    .input:focus,
+    .input:valid {
         border-color: $green;
     }
 
