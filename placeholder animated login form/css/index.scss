@@ -53,12 +53,17 @@ body {
     .small-icon {
         width: 1.2rem;
         height: auto;
-        filter: invert(70%);
+        fill: $lighter-grey;
         left: 2%;
     }
 
+    .input:focus ~ .small-icon,
+    .input:valid ~ .small-icon {
+        fill: $green;
+    }
+
     .element {
-        color: $light-grey;
+        color: $lighter-grey;
         left: 14%;
         bottom: 30%;
         transition-duration: 300ms;
@@ -68,7 +73,7 @@ body {
         padding: .8rem 2.5rem;
         width: 100%;
         border: none;
-        border-bottom: 1px solid $light-grey;
+        border-bottom: 1px solid $lighter-grey;
         color: $blue;
         font-size: $normal-text;
     }
@@ -100,8 +105,8 @@ body {
         transition-duration: 300ms;
     }
 
-    .input:focus + .element,
-    .input:valid + .element {
+    .input:focus ~ .element,
+    .input:valid ~ .element {
         top: -.7rem;
         font-size: $small-text;
         color: $green;

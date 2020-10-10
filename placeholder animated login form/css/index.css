@@ -117,13 +117,17 @@ body {
 .input-button-box .small-icon {
   width: 1.2rem;
   height: auto;
-  -webkit-filter: invert(70%);
-          filter: invert(70%);
+  fill: #afafaf;
   left: 2%;
 }
 
+.input-button-box .input:focus ~ .small-icon,
+.input-button-box .input:valid ~ .small-icon {
+  fill: #03C4A1;
+}
+
 .input-button-box .element {
-  color: #6e6e6e;
+  color: #afafaf;
   left: 14%;
   bottom: 30%;
   -webkit-transition-duration: 300ms;
@@ -134,7 +138,7 @@ body {
   padding: .8rem 2.5rem;
   width: 100%;
   border: none;
-  border-bottom: 1px solid #6e6e6e;
+  border-bottom: 1px solid #afafaf;
   color: #150485;
   font-size: 1rem;
 }
@@ -170,8 +174,8 @@ body {
           transition-duration: 300ms;
 }
 
-.input-button-box .input:focus + .element,
-.input-button-box .input:valid + .element {
+.input-button-box .input:focus ~ .element,
+.input-button-box .input:valid ~ .element {
   top: -.7rem;
   font-size: 0.8rem;
   color: #03C4A1;
