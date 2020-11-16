@@ -1,0 +1,12 @@
+body {
+    font-family: "PT Sans", sans-serif;
+}
+
+.hello-world {
+    background-color: lightgreen;
+
+    &__item {
+        background-color: lightgrey;
+    }
+}
+
