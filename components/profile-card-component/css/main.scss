@@ -1,0 +1,137 @@
+$primary-cyan-dark: #19A2AE;
+$primary-blue-dark-desaturated: #2D3248;
+$primary-blue-dark-greyish: #6A6F81;
+$neutral-grey-dark: #969696;
+$neutral-grey-light: #e0e0e0;
+
+$user-name: 1.2rem;
+$normal: 1rem;
+$status-count: 1.2rem;
+$status-text: .9rem;
+
+$gap-large: 3rem;
+$gap-normal: 2rem;
+$gap-small: 1rem;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-image: 
+        url("../images/bg-pattern-top.svg"),
+        url("../images/bg-pattern-bottom.svg");
+    background-position:
+        top -250px left -100px, /* this positions the first image */
+        bottom -250px right -100px; /* this positions the second image */
+    background-repeat: no-repeat; /* this applies to both images */
+    background-color: $primary-cyan-dark;
+    background-size: 110%;
+
+    @media (min-width: 576px) {
+        background-size: 70%;
+    }
+
+    @media (min-width: 768px) {
+        background-size: 60%;
+    }
+    
+    @media (min-width: 992px) {
+        background-size: 50%;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    max-width: 320px;
+    text-align: center;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    
+    &__top-img {
+        width: 100%;
+        height: 150px;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    
+    &__user-details {
+        &__img {
+            width: 100px;
+            height: 100px;
+            border: 5px solid white;
+            border-radius: 100rem;
+            overflow: hidden;
+            margin: auto;
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        
+        &__user-name {
+            margin-top: 5rem;
+            font-size: $user-name;
+            color: $primary-blue-dark-greyish;
+            
+            .name {
+                color: $primary-blue-dark-desaturated;
+                font-weight: 700;
+            }
+        }
+
+        &__location {
+            margin-top: .8rem;
+            color: $primary-blue-dark-greyish;
+            font-size: $normal;
+        }
+    }
+
+    &__status {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 2rem;
+
+        &__count {
+            font-size: $status-count;
+            font-weight: 700;
+            color: $primary-blue-dark-desaturated;
+            margin-bottom: .5rem;
+        }
+
+        &__text {
+            font-size: $status-text;
+            color: $neutral-grey-dark;
+        }
+    }
+
+    .status-break {
+        border: none;
+        height: 1px;
+        background-color: $neutral-grey-light;
+        margin: 2rem 0;
+    }
+}
+
