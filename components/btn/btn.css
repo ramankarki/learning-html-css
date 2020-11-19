@@ -1,0 +1,58 @@
+.btn {
+  font-family: 'Raleway', sans-serif;
+  -webkit-box-shadow: 0 5px 15px -5px #5b82ec;
+          box-shadow: 0 5px 15px -5px #5b82ec;
+  text-decoration: none;
+  color: white;
+  background-color: #3065F8;
+  padding: .7rem 1rem;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  border: none;
+}
+
+@media (min-width: 992px) {
+  .btn:hover {
+    background-color: #5b82ec;
+    color: white;
+  }
+}
+
+.btn:focus {
+  outline: 2px dotted #585989;
+}
+
+.btn--padding-lg {
+  padding: 1rem 2rem;
+}
+
+.btn--only-text {
+  color: #3065F8;
+  background-color: unset;
+  text-decoration: none;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  padding: unset;
+}
+
+@media (min-width: 992px) {
+  .btn--only-text:hover {
+    background-color: unset;
+    color: #585989;
+  }
+}
+
+.btn--color-cyan-moderate {
+  color: #3C9F8F;
+}
+
+.btn--color-cyan-moderate::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  margin-top: 5px;
+  background-color: #3C9F8F;
+}
+/*# sourceMappingURL=btn.css.map */

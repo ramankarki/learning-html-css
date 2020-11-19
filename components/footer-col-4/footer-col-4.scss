@@ -1,0 +1,102 @@
+$primary-blue-dark: #07043E;
+$primary-blue-desaturated: #585989;
+
+$p-xlarge: 2.8rem;
+$p-large: 2.2rem;
+$p-medium: 1.6rem;
+$p-normal: 1rem;
+$p-small: .9rem;
+$p-xsmall: .8rem;
+
+$gap-large: 3rem;
+$gap-normal: 2rem;
+$gap-small: 1rem;
+
+.footer-col-4 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-row-gap: $gap-normal;
+
+    @media (min-width: 992px) {
+        grid-column-gap: $gap-normal;
+        width: 90%;
+    }
+
+    &__item {
+        grid-column: 12 span;
+
+        @media (min-width: 768px) {
+            grid-column: 4 span;
+        }
+        
+        @media (min-width: 992px) {
+            grid-column: 3 span;
+        }
+        
+        @media (max-width: 992px) {
+            &--justify-center {
+                display: flex;
+                justify-content: center;
+                grid-column: span 12;
+            }
+        }
+    }
+
+    &__item-email,
+    &__item-phone {
+        color: white;
+        font-size: $p-small;
+        line-height: 1.8rem;
+        margin: $gap-small 0;
+        vertical-align: baseline;
+        cursor: pointer;
+    }
+    
+    &__item-link {
+        display: block;
+        color: white;
+        font-size: $p-small;
+        text-decoration: none;
+        line-height: 1.8rem;
+        margin: $gap-small 0;
+        width: max-content;
+        
+        &:focus {
+            outline: 2px dotted $primary-blue-desaturated;
+        }
+
+        @media (min-width: 992px) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__item-socal-link {
+        font-size: 20px;
+        display: inline-block;
+        color: white;
+        background-color: $primary-blue-dark;
+        border: 1px solid white;
+        text-align: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 100%; 
+        line-height: 38px;
+        cursor: pointer;
+        transition: 300ms ease;
+        margin: $gap-small .5rem;
+
+        @media (min-width: 992px) {
+            &:hover {
+                background-color: white;
+                color: $primary-blue-dark;
+            }
+        }
+    }
+}   
+
+.phone-icon,
+.email-icon {
+    margin-right: .5rem;
+}

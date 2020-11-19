@@ -1,0 +1,73 @@
+.testimonial {
+  padding: 1rem 2rem 2rem;
+  -webkit-box-shadow: 0 5px 15px -5px #5b82ec;
+          box-shadow: 0 5px 15px -5px #5b82ec;
+  border-radius: 0.3rem;
+  max-width: 320px;
+  line-height: 1.8rem;
+  color: #585989;
+  background-color: white;
+}
+
+.testimonial__msg {
+  font-size: 0.9rem;
+}
+
+.testimonial__msg::before {
+  content: "\201C";
+  display: block;
+  font-size: 2.8rem;
+}
+
+.testimonial__user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testimonial__user-image {
+  width: 50px;
+  border-radius: 100rem;
+  overflow: hidden;
+}
+
+.testimonial__user-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.testimonial__user-id {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 1rem;
+}
+
+.testimonial__user-name, .testimonial__user-title {
+  margin: 0;
+}
+
+.testimonial__user-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.testimonial__user-title {
+  font-size: 0.8rem;
+}
+/*# sourceMappingURL=testimonial-card.css.map */

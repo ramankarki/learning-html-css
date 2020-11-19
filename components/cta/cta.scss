@@ -1,0 +1,194 @@
+$primary-blue-dark: #07043E;
+$primary-blue-desaturated: #585989;
+$blue-light: #5b82ec;
+$cyan-moderate: #3C9F8F;
+
+$gap-large: 3rem;
+$gap-normal: 2rem;
+$gap-small: 1rem;
+
+$max-screen: 1366px;
+$radius-small: .3rem;
+
+$cta-small: 1.6rem;
+$cta-medium: 2.1rem;
+
+$p-xlarge: 2.8rem;
+$p-large: 2.2rem;
+$p-medium: 1.6rem;
+$p-normal: 1rem;
+$p-small: .9rem;
+$p-xsmall: .8rem;
+
+$shadow: 0 5px 15px -5px $blue-light;
+
+@mixin width-90-per {
+    width: 90%;
+    margin: 0 auto;
+}
+
+@mixin focus {
+    outline: 2px dotted $primary-blue-desaturated;
+}
+
+// two column layout with flexbox for bigger screen >= 992px
+.cta {
+    padding: $gap-large 0;
+    max-width: $max-screen;
+    
+    &__content {
+        @include width-90-per();
+        margin-top: $gap-normal;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 450px;
+        
+        @media (min-width: 992px) {
+            max-width: unset;
+            width: unset;
+        }
+    }
+    
+    &__image {
+        max-width: 350px;
+        width: 80%;
+        margin: 0 auto;
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        @media (min-width: 992px) {
+            max-width: unset;
+            width: unset;
+        }
+    }
+
+    &__heading {
+        font-size: $cta-small;
+        text-align: center;
+        font-weight: 700;
+        margin-top: $gap-normal;
+        font-family: 'Raleway', sans-serif;
+        color: $primary-blue-dark;
+        
+        @media (min-width: 768px) {
+            line-height: 3.2rem;
+            font-size: $cta-medium;
+        }
+
+        @media (min-width: 992px) {
+            text-align: left;
+            margin-top: 0;
+        }
+    }
+    
+    &__sub-heading {
+        font-size: $p-normal;
+        font-weight: 400;
+        text-align: center;
+        line-height: 1.8rem;
+        margin-top: $gap-normal;
+        color: $primary-blue-desaturated;
+
+        @media (min-width: 992px) {
+            text-align: left;
+        }
+    }
+
+    &__input {
+        margin-top: $gap-normal;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (min-width: 576px) {
+            display: flex;
+            align-items: center;
+
+            &-field {
+                flex: 2;
+            }
+
+            &-submit {
+                flex: 1;
+            }
+        }
+    }
+    
+    &__input-field {
+        @include width-90-per();
+        padding: .7rem $gap-small;
+        border: 1px solid $primary-blue-desaturated;
+        border-radius: $radius-small;
+        font-size: $p-small;
+        display: block;
+        margin: 0 auto;
+        box-sizing: border-box;
+        
+        &:focus {
+            @include focus;
+        }
+    }
+
+    &__input-submit {
+        @include width-90-per();
+        display: block;
+        margin: 0 auto;
+        margin-top: $gap-small;
+        box-sizing: border-box;
+
+        @media (min-width: 576px) {
+            margin-top: 0;
+            margin-left: $gap-small;
+        }
+    }
+    
+    &__how-works {
+        margin-top: $gap-normal;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        width: max-content;
+
+        img {
+            vertical-align: middle;
+        }
+
+        @media (min-width: 992px) {
+            margin-left: unset;
+        }
+    }
+
+    &__testimonial {
+        margin-top: $gap-large;
+
+        .testimonial {
+            margin: auto;
+            @media (min-width: 992px) {
+                margin-left: unset;
+            }
+        }
+    }
+
+    // two column for >= 992px
+    @media (min-width: 992px) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin: -$gap-normal;
+
+        &__content,
+        &__image {
+            flex: 1;
+            margin: $gap-normal;
+        }
+        
+        &--row-reverse {
+            flex-direction: row-reverse;
+        }
+
+        &--align-center {
+            align-items: center;
+        }
+    }
+}

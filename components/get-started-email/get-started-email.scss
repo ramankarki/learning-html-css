@@ -1,0 +1,98 @@
+$primary-blue-dark: #07043E;
+$primary-blue-desaturated: #585989;
+
+$p-xlarge: 2.8rem;
+$p-large: 2.2rem;
+$p-medium: 1.6rem;
+$p-normal: 1rem;
+$p-small: .9rem;
+$p-xsmall: .8rem;
+
+$gap-large: 3rem;
+$gap-normal: 2rem;
+$gap-small: 1rem;
+
+.get-started-email {
+    width: 90%;
+    max-width: 450px;
+    margin: auto;
+
+    &__heading {
+        color: white;
+        font-size: $p-medium;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        text-align: center;
+
+        @media (min-width: 992px) {
+            font-size: $p-large;
+        }
+    }
+
+    &__sub-heading {
+        font-size: $p-small;
+        color: white;
+        line-height: 1.8rem;
+        text-align: center;
+    }
+
+    &__input {
+        display: block;
+        margin-top: $gap-normal;
+    }
+
+    &__input-field {
+        width: 90%;
+        display: block;
+        margin: auto;
+        padding: .7rem 1rem;
+        font-size: $p-small;
+        border-radius: .3rem;
+        border: none;
+        box-sizing: border-box;
+        
+        &:focus {
+            outline: 2px dotted $primary-blue-dark;
+        }
+    }
+
+    &__input-submit {
+        width: 90%;
+        margin: auto;
+        margin-top: $gap-small;
+        display: block;
+        box-sizing: border-box;
+    }
+
+    @media (min-width: 992px) {
+        max-width: unset;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__input,
+        &__content {
+            flex: 1;
+            max-width: 450px;
+        }
+
+        &__input {
+            margin-top: 0;
+            margin-left: $gap-normal;
+        }
+
+        &__input-submit {
+            width: 50%;
+        }
+
+        &__input-field,
+        &__input-submit {
+            margin-left: unset;
+        }
+
+        &__heading,
+        &__sub-heading {
+            text-align: left;
+        }
+    }
+}
